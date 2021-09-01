@@ -87,6 +87,11 @@ var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? En
 // function to start a new game
 var startGame = function() {
 
+      //reset player stats
+      var playerHealth = 100;
+      var playerAttack = 10;
+      var playerMoney = 10;
+
     for(var i = 0; i < enemyNames.length; i++) {
         // let player know what round they are in, remember that arrays start at 0 so it needs to have 1 added to it
         if (playerHealth > 0) {
@@ -107,14 +112,6 @@ var startGame = function() {
             window.alert("You have lost your robot in battle! Game Over!");
         break;
         }
-    }
-
-    // play game
-    startGame() {
-        //reset player stats
-        var playerHealth = 100;
-        var playerAttack = 10;
-        var playerMoney = 10;
     }
 
     // after the loop ends, player is either out of health or enemies to fight, so run the endGame function
@@ -142,11 +139,6 @@ var endGame = function() {
     else {
         window.alert("Thank you for playing Robot Gladiators! Come back soon!");
     }
-
-    window.alert("The game has now ended. Let's see how you did!");
-    }
-    }
-
 };
 
 // Start the game when the page loads
